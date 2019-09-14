@@ -1,3 +1,0 @@
-auto dimensions = StringSplitter::split(data[1]; " ");
-int width = stoi(dimensions[0]);
-int height = stoi(dimensions[1]);
