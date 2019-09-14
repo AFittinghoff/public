@@ -1,9 +1,6 @@
 /*
-Assignment: PA
 Description: Uses a binary tree to play a "yes/no" animal guessing game with the user. Saves/loads game with input/output files.
 Author: Alex Fittinghoff
-HSU ID: 013304184
-Completion Time: 7 hours so far
 In completing this program, I recieved help from the following people: Adam Carter
 */
 
