@@ -1,0 +1,22 @@
+void reverseOrderTraversal(BinaryNode *root)
+{
+	//base case
+	if (root == nullptr)
+		return;
+	
+	//right
+	if (root->right != nullptr)
+	{
+		reverseOrderTraversal(root->right);
+	}
+
+	//center
+	cout << root->value << endl;
+
+	//left
+	if (root->left != nullptr)
+	{
+		reverseOrderTraversal(root->left);
+	}
+}
+	

@@ -1,0 +1,239 @@
+/*
+Assignment: PA1
+Description: Sifts through a .csv file and outputs the death rates that the user specifies.
+Author: Alex Fittinghoff
+HSU ID: 013304184
+Completion Time: 12 hours so far
+In completing this program, I recieved help from the following people: Adam Carter
+*/
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cmath>
+#include <vector>
+#include <sstream>
+#include "CsvReader.h"
+using namespace std;
+
+int main(void)
+{
+	CsvStateMachine csm{ "death_rates.csv" };
+//	CsvStateMachine csm{ "test.csv" };
+	vector<vector<string>> result = csm.processFile();
+	vector<string> cell;
+
+	int x = 0; // filled with converted stringstream values
+	int y = 0; // sum of stringstream values
+	string input_state;
+	string input_cause;
+	string input_year;
+	char ans;
+
+//	cout << "Vector Size: " << result.size() << endl;
+
+	do
+	{
+	cout << "***Death Rate Data Analysis***" << endl;
+	cout << "Enter State (-1 for all states): ";
+	getline(cin, input_state);
+	cout << "Enter Cause (-1 for all causes): ";
+	getline(cin, input_cause);
+	cout << "Enter Year (-1 for all years): ";
+	getline(cin, input_year);
+
+	/*for (int i = 1; i < result.size(); i++)// CORRECT?
+	{
+		for (int k = 0; k < result[i].size() - 2; k++)
+		{
+			if (result[i][k] == "1999") //finds input year, adds cell 3 spaces after it (the death number) to y
+			{
+				string fred = result[i][k + 3];
+				stringstream who(fred);
+				who >> x;
+				y = y + x;
+			}
+		}
+	}
+	cout << "Total deaths in 1999: " << y << endl;
+
+	for (int i = 1; i < 52; i++)// INCORRECT!
+	{
+		for (int k = 0; k < result[i].size(); k++)
+		{
+				string fred = result[i][3];
+				stringstream who(fred);
+				who >> x;
+				y = y + x;
+		}
+	}
+	cout << "Total deaths in 1999: " << y << endl;*/
+
+	int counter = 0;
+
+	if (input_state == "-1" && input_cause == "-1" && input_year == "-1") //for all states, causes, and years
+	{
+		for (int i = 1; i < result.size(); i++)
+		{
+//			cout << result[i][3] << endl;
+			
+//			for (int k = 0; k < result[i].size(); k++) //ASK ABOUT
+//			{
+				string fred = result[i][3]; //4th column, starts at 0
+				//stringstream who(fred);
+				//who >> x;
+				x = atoi(fred.c_str());
+				y = y + x;
+				counter++;
+//			}	
+		}
+			cout << "Total deaths in all states from all causes in all years: " << y << endl;
+			cout << "Counter: " << counter << endl;
+	}
+	else if (input_state != "-1" && input_cause == "-1" && input_year == "-1") // if actual value is entered for STATE ONLY
+	{
+		for (int i = 1; i < result.size(); i++)//WORKS
+		{
+			for (int k = 0; k < result[i].size(); k++)
+			{
+				if (result[i][k] == input_state) //finds input state, adds cell after it (the death number) to y
+				{
+					string fred = result[i][k + 1];
+					//stringstream who(fred);
+					//who >> x;
+					x = atoi(fred.c_str());
+					y = y + x;
+				}
+			}
+		}
+
+		cout << "Total deaths in " << input_state << " from all causes in all years: " << y << endl;
+	}
+	else if (input_state != "-1" && input_cause != "-1" && input_year == "-1") // if actual value is entered for cause & state
+	{
+		for (int i = 1; i < result.size(); i++) //WORKS
+		{
+			for (int k = 0; k < result[i].size(); k++)
+			{
+				if (result[i][k] == input_cause && result[i][k + 1] == input_state)
+				{
+					string fred = result[i][k + 2];
+					//stringstream who(fred);
+					//who >> x;
+					x = atoi(fred.c_str());
+					y = y + x;
+				}
+			}
+		}
+
+		cout << "Total deaths in " << input_state << " from " << input_cause << " in all years: " << y << endl;
+	}
+	else if (input_state == "-1" && input_cause != "-1" && input_year == "-1") // if actual value is entered for cause ONLY
+	{
+		for (int i = 1; i < result.size(); i++)//WORKS
+		{
+			for (int k = 0; k < result[i].size(); k++)
+			{
+				if (result[i][k] == input_cause)
+				{
+					string fred = result[i][k + 2];
+					//stringstream who(fred);
+					//who >> x;
+					x = atoi(fred.c_str());
+					y = y + x;
+				}
+			}
+		}
+
+		cout << "Total deaths in all states from " << input_cause << " in all years: " << y << endl;
+	}
+
+	else if (input_state != "-1" && input_cause != "-1" && input_year != "-1") // if actual value is entered for cause, state, & year
+	{
+		for (int i = 1; i < result.size(); i++) // WORKS
+		{
+			for (int k = 0; k < result[i].size(); k++)
+			{
+				if (result[i][k] == input_year && result[i][k + 1] == input_cause && result[i][k + 2] == input_state)//&& result[i][2] == input_state)
+				{
+					string fred = result[i][k + 3];
+					//stringstream who(fred);
+					//who >> x;
+					x = atoi(fred.c_str());
+					y = y + x;
+				}
+			}
+		}
+
+		cout << "Total deaths in " << input_state << " from " << input_cause << " in " << input_year << ": " << y << endl;
+	}
+	else if (input_state != "-1" && input_cause == "-1" && input_year != "-1") // if actual value is entered for state & year
+	{
+		for (int i = 1; i < result.size(); i++) //WORKS
+		{
+			for (int k = 0; k < result[i].size() - 2; k++)
+			{
+				if (result[i][k] == input_year && result[i][k + 2] == input_state)
+				{
+					string fred = result[i][k + 3];
+					//stringstream who(fred);
+					//who >> x;
+					x = atoi(fred.c_str());
+					y = y + x;
+				}
+			}
+		}
+
+		cout << "Total deaths in " << input_state << " from " << input_cause << " in " << input_year << ": " << y << endl;
+	}
+	else if (input_state == "-1" && input_cause == "-1" && input_year != "-1") // if actual value is entered for year ONLY
+	{//WORKS
+		for (int i = 1; i < result.size(); i++)
+		{
+			for (int k = 0; k < result[i].size() - 2; k++)
+			{
+				if (result[i][k] == input_year)
+				{
+					string fred = result[i][k + 3];
+					//stringstream who(fred);
+					//who >> x;
+					x = atoi(fred.c_str());
+					y = y + x;
+				}
+			}
+		}
+
+		cout << "Total deaths in all states from all causes in " << input_year << ": " << y << endl;
+	}
+	else if (input_state == "-1" && input_cause != "-1" && input_year != "-1") // if actual value is entered for cause and year
+	{//
+		for (int i = 1; i < result.size(); i++)//WORKS
+		{
+			for (int k = 0; k < result[i].size() - 2; k++)
+			{
+				if (result[i][k] == input_year && result[i][k + 1] == input_cause)
+				{
+					string fred = result[i][k + 3];
+					//stringstream who(fred);
+					//who >> x;
+					x = atoi(fred.c_str());
+					y = y + x;
+				}
+			}
+		}
+
+		cout << "Total deaths in all states from " << input_cause << " in " << input_year << ": " << y << endl;
+	}
+
+	cout << endl;
+
+	y = 0;
+	//RESET Y TO 0 HERE!!
+
+	cout << "Would you like to run another query (Y/N)?: ";
+	cin >> ans;
+	cin.ignore(1000, '\n');
+	cout << endl;
+	} while (ans == 'y' || ans == 'Y');
+return 0;
+}
