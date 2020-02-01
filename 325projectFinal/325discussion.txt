@@ -1,0 +1,33 @@
+-- Alex Fittinghoff
+-- CS 325 - Fall 2019
+-- last modified: 12/12/2019
+
+This database could be used by the staff of Tommy's Desserts to track 
+purchases, collect data on what types of desserts are favored by certain 
+customers, and prepare for events. 
+
+For example, the staff could check the "Events" table to see what events are 
+coming up--ordering by date in descending order, and check which event was the
+soonest, and then prepare accordingly. The staff could check who was hosting 
+the event, look up his contact information in the "Favored_Customers" table, 
+and would be able to get in touch with him if they had any questions for how 
+he wanted things handled, or how much of a certain dessert he wanted shipped 
+to the event, and so on. The "Event_Type" column would also help tell the 
+staff what type of event to prepare for, so they could plan accordingly.
+
+Additionally, the staff could look up what desserts a customer had a history 
+of purchasing, and market future discounts and sales to them accordingly. If a 
+customer preferred Chocolate Cakes, then the staff could send him e-mails about 
+the upcoming Valentine's Day Chocolate Discount, for example.
+
+The "Cake", "Ice Cream", and "Topping" tables would help the staff to keep 
+track of the proportions of, and toppings added to, each dessert. This would 
+allow the staff to know just how much they should charge the customer for each
+item. For example, if a scoop of ice cream costs $1.00, a medium cone costs 
+$2.00, and a serving of chocolate chips costs $0.50, then the staff would know 
+to charge a customer $4.50 for a medium cone with two scoops of ice cream and 
+a serving of chocolate chips.
+
+Lastly, the "Purchase_Type" table would allow the staff to see who has paid 
+with Credit or Debit cards, in case an issue with the cards arose. They would 
+know not to worry about those who had paid with cash.

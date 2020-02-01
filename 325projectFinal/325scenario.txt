@@ -1,0 +1,10 @@
+-- Alex Fittinghoff 
+-- CS 325 - Fall 2019 
+-- last modified: 11/16/2019
+ 
+Tommy's Desserts serves cakes and ice cream for all of your dining and 
+party needs (for both private homes and for restaurants). Their expert 
+bakers have designed an extensive menu of various different sizes/flavors
+of cakes, different ice creams, and different toppings. You can order 
+desserts in-store, or you can have them ordered for an event. Customers 
+can sign up for "favored" customer status.

@@ -1,0 +1,25 @@
+
+                             Non-Birthday Customers             Alex Fittinghoff
+Name                 Event                  Event Type                          
+-------------------- ---------------------- --------------------                
+Sanders, Dennis      Christmas Party        Holiday                             
+Sanders, Dennis      Ice Cream Social 2020  Party                               
+Samuels, Mary        ComicX 2020            Party                               
+Samuels, Mary        Christmas Party        Holiday                             
+Samuels, Mary        FrogFest 2019          Party                               
+Roberts, Mike        BugFest 2019           Party                               
+Roberts, Mike        AnimeFest 2020         Party                               
+Lee, Jim             PlumberFest 2020       Party                               
+Lee, Wanda           ComicCon 2020          Party                               
+Lemuels, Barry       Christmas Party        Holiday                             
+Lemuels, Barry       Thanksgiving           Holiday                             
+Davis, Mike          Christmas Party        Holiday                             
+Davis, Mike          Thanksgiving           Holiday                             
+Davis, Mike          Thanksgiving Party     Holiday                             
+Thompson, Harold     ComicFest 2020         Party                               
+Thompson, Harold     DragonCon              Party                               
+Johns, Terry         Jim's Bachelor Party   Party                               
+Johns, Terry         Christmas Party        Holiday                             
+
+18 rows selected.
+

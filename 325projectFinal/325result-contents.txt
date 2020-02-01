@@ -1,0 +1,325 @@
+Daily_Sales
+
+   SALE_ID SALE_DATE                                                            
+---------- ---------                                                            
+       101 20-NOV-19                                                            
+       102 20-NOV-19                                                            
+       103 21-NOV-19                                                            
+       104 22-NOV-19                                                            
+       105 24-NOV-19                                                            
+       106 24-NOV-19                                                            
+       107 25-NOV-19                                                            
+       108 26-NOV-19                                                            
+       109 27-NOV-19                                                            
+       110 28-NOV-19                                                            
+       111 28-NOV-19                                                            
+
+   SALE_ID SALE_DATE                                                            
+---------- ---------                                                            
+       112 29-NOV-19                                                            
+
+12 rows selected.
+
+Purchase_Type
+
+   SALE_ID PURCHASE_METHOD                                                      
+---------- ------------------------------                                       
+       101 CreditCard                                                           
+       102 CreditCard                                                           
+       103 DebitCard                                                            
+       104 Cash                                                                 
+       104 CreditCard                                                           
+       105 DebitCard                                                            
+       106 DebitCard                                                            
+       107 Cash                                                                 
+       107 DebitCard                                                            
+       108 Cash                                                                 
+       109 Cash                                                                 
+
+   SALE_ID PURCHASE_METHOD                                                      
+---------- ------------------------------                                       
+       110 Cash                                                                 
+       111 CreditCard                                                           
+       112 CreditCard                                                           
+
+14 rows selected.
+
+Favored_Customers
+
+   CUST_ID CUST_LNAME                                         CUST_FNAME        
+---------- -------------------------------------------------- ------------------
+     10301 Sanders                                            Dennis            
+     10302 Samuels                                            Mary              
+     10303 Roberts                                            Mike              
+     10304 Lee                                                Jim               
+     10305 Lee                                                Wanda             
+     10306 Lemuels                                            Barry             
+     10307 Davis                                              Mike              
+     10308 Thompson                                           Harold            
+     10309 Gruber                                             Hans              
+     10310 Johnson                                            Bob               
+     10311 Johns                                              Terry             
+
+11 rows selected.
+
+
+   CUST_ID CUST_PHONE_NUM                                                       
+---------- ------------------------------                                       
+     10301 555-555-1234                                                         
+     10302 555-555-1238                                                         
+     10303 555-555-6789                                                         
+     10304 555-555-6786                                                         
+     10305 555-555-6786                                                         
+     10306 555-555-6226                                                         
+     10307 555-555-6212                                                         
+     10308 555-555-1342                                                         
+     10309 555-555-0999                                                         
+     10310 555-555-0912                                                         
+     10311 555-555-1662                                                         
+
+11 rows selected.
+
+
+CUST_ADDRESS                                       CUST_EMAIL                   
+-------------------------------------------------- -----------------------------
+1234 Fake St.                                      ds@fake.com                  
+87 E St.                                           ms@fake.com                  
+13 K St.                                           mr@fake.com                  
+14 K St.                                           jl@fake.com                  
+14 K St.                                           wl@fake.com                  
+11 M St.                                           bl@fake.com                  
+5 North St.                                        md@fake.com                  
+77 North St.                                       ht@fake.com                  
+12 Nakatomi St.                                    hg@fake.com                  
+11 Harris St.                                      bj2@fake.com                 
+19 Beef St.                                        tj3@fake.com                 
+
+11 rows selected.
+
+Events
+
+  EVENT_ID EVENT_NAME                                         EVENT_TYPE        
+---------- -------------------------------------------------- ------------------
+         1 Mike's Birthday                                    Birthday          
+         2 Tom's Birthday                                     Birthday          
+         3 Christmas Party                                    Holiday           
+         4 Christmas Party                                    Holiday           
+         5 Thanksgiving                                       Holiday           
+         6 Thanksgiving                                       Holiday           
+         7 FrogFest 2019                                      Party             
+         8 BugFest 2019                                       Party             
+         9 DragonCon                                          Party             
+        10 Otto's Birthday                                    Birthday          
+        11 Mindy's Birthday                                   Birthday          
+
+11 rows selected.
+
+
+  EVENT_ID EVENT_DAT EVENT_TIME                        CUST_ID                  
+---------- --------- ------------------------------ ----------                  
+         1 01-SEP-18 5:00 PM                             10310                  
+         2 03-SEP-19 6:00 PM                             10305                  
+         3 25-DEC-19 3:00 PM                             10306                  
+         4 25-DEC-19 4:00 PM                             10307                  
+         5 28-NOV-19 4:00 PM                             10307                  
+         6 28-NOV-19 4:00 PM                             10306                  
+         7 06-DEC-19 5:00 PM                             10302                  
+         8 06-DEC-19 5:00 PM                             10303                  
+         9 05-OCT-19 2:00 PM                             10308                  
+        10 02-OCT-19 4:00 PM                             10304                  
+        11 01-AUG-19 4:00 PM                             10301                  
+
+11 rows selected.
+
+Desserts
+
+DESSERT_ID DESSERT_TYPE                      CUST_ID   EVENT_ID                 
+---------- ------------------------------ ---------- ----------                 
+       101 Cake                                10301         11                 
+       102 Cake                                10304         10                 
+       103 Ice Cream                           10308          9                 
+       104 Ice Cream                           10303          8                 
+       105 Ice Cream                           10302          7                 
+       106 Ice Cream                           10306          6                 
+       107 Cake                                10306          6                 
+       108 Cake                                10307          5                 
+       109 Ice Cream                           10306          6                 
+       110 Ice Cream                           10307          5                 
+       111 Cake                                10310          1                 
+
+DESSERT_ID DESSERT_TYPE                      CUST_ID   EVENT_ID                 
+---------- ------------------------------ ---------- ----------                 
+       112 Cake                                                                 
+       113 Cake                                                                 
+       114 Cake                                                                 
+       115 Cake                                                                 
+       116 Cake                                                                 
+       117 Cake                                                                 
+       118 Ice Cream                                                            
+       119 Ice Cream                                                            
+       120 Ice Cream                                                            
+       121 Ice Cream                                                            
+       122 Ice Cream                                                            
+
+DESSERT_ID DESSERT_TYPE                      CUST_ID   EVENT_ID                 
+---------- ------------------------------ ---------- ----------                 
+       123 Ice Cream                                                            
+
+23 rows selected.
+
+Toppings
+
+TOPPING_ID TOPPING_NAME                   TOPPING_AMOUNT DESSERT_ID             
+---------- ------------------------------ -------------- ----------             
+        10 Chocolate Frosting                          2        101             
+        11 Chocolate Sauce                             3        102             
+        12 Reese's Cups                                1        103             
+        13 White Chocolate Chips                       2        104             
+        14 Chocolate Chips                             3        105             
+        15 Chocolate Chips                             2        106             
+        16 Cherry Sauce                                3        107             
+        17 Chocolate Sauce                             2        107             
+        18 Vanilla Frosting                            2        108             
+        19 Cookie Dough                                2        109             
+        20 Cookie Dough                                3        110             
+
+TOPPING_ID TOPPING_NAME                   TOPPING_AMOUNT DESSERT_ID             
+---------- ------------------------------ -------------- ----------             
+        21 Chocolate Chips                             3        111             
+
+12 rows selected.
+
+Dessert_Sales
+
+DESSERT_ID    SALE_ID                                                           
+---------- ----------                                                           
+       101        101                                                           
+       102        102                                                           
+       103        104                                                           
+       104        103                                                           
+       105        105                                                           
+       106        111                                                           
+       107        110                                                           
+       108        109                                                           
+       109        108                                                           
+       110        112                                                           
+       111        107                                                           
+
+11 rows selected.
+
+Ice_Cream
+
+ICE_CREAM_ID ICE_CREAM_FLAVOR               IC                                  
+------------ ------------------------------ --                                  
+         121 Chocolate                      Md                                  
+         122 Vanilla                        Md                                  
+         123 Cookies n' Cream               Lg                                  
+         124 Cookie Dough                   Lg                                  
+         125 Chocolate                      Sm                                  
+         126 Chocolate                      Sm                                  
+         127 Raspberry                      Md                                  
+         128 Raspberry                      Lg                                  
+         129 Blueberry                      Lg                                  
+         130 Cookies n' Cream               Sm                                  
+         131 Cookies n' Cream               Lg                                  
+
+ICE_CREAM_ID ICE_CREAM_FLAVOR               IC                                  
+------------ ------------------------------ --                                  
+         132 Cookie Dough                   Md                                  
+
+12 rows selected.
+
+
+ICE_CREAM_ID CUP  SCOOP_NUM                                                     
+------------ --- ----------                                                     
+         121 Cup          2                                                     
+         122 Con          2                                                     
+         123 Con          1                                                     
+         124 Cup          3                                                     
+         125 Cup          1                                                     
+         126 Con          1                                                     
+         127 Con          2                                                     
+         128 Con          3                                                     
+         129 Cup          2                                                     
+         130 Cup          2                                                     
+         131 Cup          3                                                     
+
+ICE_CREAM_ID CUP  SCOOP_NUM                                                     
+------------ --- ----------                                                     
+         132 Con          2                                                     
+
+12 rows selected.
+
+
+ICE_CREAM_ID NUM_ICE_CREAMS DESSERT_ID                                          
+------------ -------------- ----------                                          
+         121              2        103                                          
+         122              3        104                                          
+         123              3        105                                          
+         124              1        106                                          
+         125              1        109                                          
+         126              2        110                                          
+         127              2        118                                          
+         128              4        119                                          
+         129              5        120                                          
+         130              2        121                                          
+         131              1        122                                          
+
+ICE_CREAM_ID NUM_ICE_CREAMS DESSERT_ID                                          
+------------ -------------- ----------                                          
+         132              1        123                                          
+
+12 rows selected.
+
+Cakes
+
+   CAKE_ID CAKE_TYPE                      CAKE_LAYER_NUM                        
+---------- ------------------------------ --------------                        
+       121 Chocolate                                   3                        
+       122 Carrot                                      2                        
+       123 Chocolate                                   3                        
+       124 Strawberry                                  1                        
+       125 Red Velvet                                  3                        
+       126 Regular                                     2                        
+       127 Angel Food Cake                             1                        
+       128 Chocolate                                   3                        
+       129 Chocolate                                   3                        
+       130 Regular                                     2                        
+       131 Regular                                     2                        
+
+11 rows selected.
+
+
+   CAKE_ID CAKE_FROSTING_TYPE             CAKE_SHAPE                            
+---------- ------------------------------ ------------------------------        
+       121 Vanilla                        Rectangle                             
+       122 Vanilla                        Circle                                
+       123 Chocolate                      Circle                                
+       124 Chocolate                      Square                                
+       125 Vanilla                        Square                                
+       126 Vanilla                        Square                                
+       127 None                           Circle                                
+       128 Chocolate                      Circle                                
+       129 Chocolate                      Rectangle                             
+       130 Chocolate                      Rectangle                             
+       131 Vanilla                        Circle                                
+
+11 rows selected.
+
+
+   CAKE_ID  NUM_CAKES DESSERT_ID                                                
+---------- ---------- ----------                                                
+       121          2        101                                                
+       122          1        102                                                
+       123          3        107                                                
+       124          4        108                                                
+       125          2        111                                                
+       126          3        112                                                
+       127          1        113                                                
+       128          2        114                                                
+       129          4        115                                                
+       130          2        116                                                
+       131          3        117                                                
+
+11 rows selected.
+

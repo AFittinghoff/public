@@ -1,0 +1,45 @@
+Report 2: Let's find the set of events coming up in 2020, so that we
+can properly prepare for them.
+
+                                   2020 Events                  Alex Fittinghoff
+Date         Event ID Event                       Host ID Host Name             
+------------ -------- ------------------------ ---------- --------------------  
+Jan 15, 2020       13 Ice Cream Social 2020         10301 Sanders, Dennis       
+************ --------                                                           
+count               1                                                           
+                                                                                
+Jan 19, 2020       14 PlumberFest 2020              10304 Lee, Jim              
+************ --------                                                           
+count               1                                                           
+                                                                                
+Feb 03, 2020       12 Jim's Bachelor Party          10311 Johns, Terry          
+************ --------                                                           
+count               1                                                           
+                                                                                
+Feb 19, 2020       16 AnimeFest 2020                10303 Roberts, Mike         
+************ --------                                                           
+count               1                                                           
+                                                                                
+Feb 26, 2020       17 Reggie's Birthday             10308 Thompson, Harold      
+************ --------                                                           
+count               1                                                           
+                                                                                
+Mar 11, 2020       21 ComicFest 2020                10308 Thompson, Harold      
+                   22 ComicX 2020                   10302 Samuels, Mary         
+                   15 ComicCon 2020                 10305 Lee, Wanda            
+************ --------                                                           
+count               3                                                           
+                                                                                
+Nov 26, 2020       20 Thanksgiving Party            10307 Davis, Mike           
+************ --------                                                           
+count               1                                                           
+                                                                                
+Dec 25, 2020       23 Christmas Party               10302 Samuels, Mary         
+                   18 Christmas Party               10311 Johns, Terry          
+                   19 Christmas Party               10301 Sanders, Dennis       
+************ --------                                                           
+count               3                                                           
+                                                                                
+
+12 rows selected.
+

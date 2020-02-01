@@ -1,0 +1,19 @@
+SP2-0734: unknown command beginning "to_char(sa..." - rest of line ignored.
+
+                          Customers Favoring Ice Cream          Alex Fittinghoff
+Date of Sale  Flavor               Customer                                     
+------------- -------------------- --------------------                         
+Nov 21, 2019  Vanilla              Roberts, Mike                                
+Nov 22, 2019  Chocolate            Thompson, Harold                             
+Nov 24, 2019  Cookies n' Cream     Samuels, Mary                                
+Nov 26, 2019  Chocolate            Lemuels, Barry                               
+Nov 28, 2019  Cookie Dough         Lemuels, Barry                               
+Nov 29, 2019  Chocolate            Davis, Mike                                  
+Dec 01, 2019  Cookies n' Cream     Lee, Wanda                                   
+Dec 01, 2019  Cookies n' Cream     Lee, Jim                                     
+Dec 01, 2019  Blueberry            Roberts, Mike                                
+Dec 02, 2019  Raspberry            Sanders, Dennis                              
+Dec 02, 2019  Raspberry            Samuels, Mary                                
+
+11 rows selected.
+

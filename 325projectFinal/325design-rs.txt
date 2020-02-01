@@ -1,0 +1,34 @@
+-- Alex Fittinghoff
+-- CS 325 - Fall 2019
+-- last modified: 11/16/2019
+
+Daily_Sales(SALE_ID, sale_date)
+
+Purchase_Type(SALE_ID, PURCHASE_METHOD)
+	foreign key (SALE_ID) references Daily_Sales
+
+Favored_Customers(CUST_ID, cust_lname, cust_fname, cust_phone_num, 
+			cust_address, cust_email, payment_status)
+
+Events(EVENT_ID, event_name, event_type, event_date, event_time, cust_id)
+	foreign key (cust_id) references Favored_Customers
+
+Toppings(TOPPING_ID, topping_name, topping_amount, dessert_id)
+	foreign key (dessert_id) references Desserts
+
+Desserts(DESSERT_ID, dessert_type, cust_id, event_id)
+	foreign key (cust_id) references Favored_Customers
+	foreign key (event_id) references Events
+
+Dessert_Sales(DESSERT_ID, SALE_ID)
+	foreign key (dessert_id) references Desserts
+	foreign key (sale_id) references Daily_Sales
+
+Ice_Cream(DESSERT_ID, ice_cream_flavor, ice_cream_size, cup_or_cone,
+		scoop_num, num_ice_creams, dessert_id)
+	foreign key (dessert_id) references Desserts
+
+Cakes(DESSERT_ID, cake_type, cake_layer_num, cake_frosting_type, cake_shape,
+	num_cakes, dessert_id)
+	foreign key (dessert_id) references Desserts
+

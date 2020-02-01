@@ -1,0 +1,280 @@
+Query 1:  Select ice creams sold so far.
+
+SALE_DATE ICE_CREAM_FLAVOR                                                      
+--------- ------------------------------                                        
+22-NOV-19 Chocolate                                                             
+21-NOV-19 Vanilla                                                               
+24-NOV-19 Cookies n' Cream                                                      
+28-NOV-19 Cookie Dough                                                          
+26-NOV-19 Chocolate                                                             
+29-NOV-19 Chocolate                                                             
+
+6 rows selected.
+
+Query 2: See what the most popular type of event is, so we know what
+supplies to stock up on.
+
+EVENT_TYPE                     EVENT_POPULARITY                                 
+------------------------------ ----------------                                 
+Party                                         8                                 
+Holiday                                       7                                 
+Birthday                                      4                                 
+
+Query 3: Which of our customers have hosted events other than
+birthdays, and which events? This way, we know what to market
+to them.
+
+CUST_LNAME                                                                      
+--------------------------------------------------                              
+CUST_FNAME                                                                      
+------------------------------                                                  
+EVENT_NAME                                                                      
+--------------------------------------------------                              
+Lemuels                                                                         
+Barry                                                                           
+Christmas Party                                                                 
+                                                                                
+Davis                                                                           
+Mike                                                                            
+Christmas Party                                                                 
+
+CUST_LNAME                                                                      
+--------------------------------------------------                              
+CUST_FNAME                                                                      
+------------------------------                                                  
+EVENT_NAME                                                                      
+--------------------------------------------------                              
+                                                                                
+Davis                                                                           
+Mike                                                                            
+Thanksgiving                                                                    
+                                                                                
+Lemuels                                                                         
+Barry                                                                           
+
+CUST_LNAME                                                                      
+--------------------------------------------------                              
+CUST_FNAME                                                                      
+------------------------------                                                  
+EVENT_NAME                                                                      
+--------------------------------------------------                              
+Thanksgiving                                                                    
+                                                                                
+Samuels                                                                         
+Mary                                                                            
+FrogFest 2019                                                                   
+                                                                                
+Roberts                                                                         
+
+CUST_LNAME                                                                      
+--------------------------------------------------                              
+CUST_FNAME                                                                      
+------------------------------                                                  
+EVENT_NAME                                                                      
+--------------------------------------------------                              
+Mike                                                                            
+BugFest 2019                                                                    
+                                                                                
+Thompson                                                                        
+Harold                                                                          
+DragonCon                                                                       
+                                                                                
+
+CUST_LNAME                                                                      
+--------------------------------------------------                              
+CUST_FNAME                                                                      
+------------------------------                                                  
+EVENT_NAME                                                                      
+--------------------------------------------------                              
+Johns                                                                           
+Terry                                                                           
+Jim's Bachelor Party                                                            
+                                                                                
+Sanders                                                                         
+Dennis                                                                          
+Ice Cream Social 2020                                                           
+
+CUST_LNAME                                                                      
+--------------------------------------------------                              
+CUST_FNAME                                                                      
+------------------------------                                                  
+EVENT_NAME                                                                      
+--------------------------------------------------                              
+                                                                                
+Lee                                                                             
+Jim                                                                             
+PlumberFest 2020                                                                
+                                                                                
+Lee                                                                             
+Wanda                                                                           
+
+CUST_LNAME                                                                      
+--------------------------------------------------                              
+CUST_FNAME                                                                      
+------------------------------                                                  
+EVENT_NAME                                                                      
+--------------------------------------------------                              
+ComicCon 2020                                                                   
+                                                                                
+Roberts                                                                         
+Mike                                                                            
+AnimeFest 2020                                                                  
+                                                                                
+Johns                                                                           
+
+CUST_LNAME                                                                      
+--------------------------------------------------                              
+CUST_FNAME                                                                      
+------------------------------                                                  
+EVENT_NAME                                                                      
+--------------------------------------------------                              
+Terry                                                                           
+Christmas Party                                                                 
+                                                                                
+Sanders                                                                         
+Dennis                                                                          
+Christmas Party                                                                 
+                                                                                
+
+CUST_LNAME                                                                      
+--------------------------------------------------                              
+CUST_FNAME                                                                      
+------------------------------                                                  
+EVENT_NAME                                                                      
+--------------------------------------------------                              
+Davis                                                                           
+Mike                                                                            
+Thanksgiving Party                                                              
+                                                                                
+
+15 rows selected.
+
+Query 4: We're having a fun contest where we find the largest amount
+of a topping ever added to a Dessert. Whoever wins gets a fun prize.
+This query will help us find out who the winner is.
+
+CUST_LNAME                                            CUST_ID                   
+-------------------------------------------------- ----------                   
+TOPPING_NAME                   TOPPING_AMOUNT                                   
+------------------------------ --------------                                   
+Lemuels                                                 10306                   
+Cherry Sauce                                4                                   
+                                                                                
+
+Query 5: Let's find the set of events coming up in 2020, so that we
+can properly prepare for them.
+
+  EVENT_ID EVENT_NAME                                         EVENT_DAT         
+---------- -------------------------------------------------- ---------         
+   CUST_ID CUST_LNAME                                                           
+---------- --------------------------------------------------                   
+CUST_FNAME                                                                      
+------------------------------                                                  
+        19 Christmas Party                                    25-DEC-20         
+     10301 Sanders                                                              
+Dennis                                                                          
+                                                                                
+        13 Ice Cream Social 2020                              15-JAN-20         
+     10301 Sanders                                                              
+Dennis                                                                          
+
+  EVENT_ID EVENT_NAME                                         EVENT_DAT         
+---------- -------------------------------------------------- ---------         
+   CUST_ID CUST_LNAME                                                           
+---------- --------------------------------------------------                   
+CUST_FNAME                                                                      
+------------------------------                                                  
+                                                                                
+        16 AnimeFest 2020                                     19-FEB-20         
+     10303 Roberts                                                              
+Mike                                                                            
+                                                                                
+        14 PlumberFest 2020                                   19-JAN-20         
+     10304 Lee                                                                  
+
+  EVENT_ID EVENT_NAME                                         EVENT_DAT         
+---------- -------------------------------------------------- ---------         
+   CUST_ID CUST_LNAME                                                           
+---------- --------------------------------------------------                   
+CUST_FNAME                                                                      
+------------------------------                                                  
+Jim                                                                             
+                                                                                
+        15 ComicCon 2020                                      11-MAR-20         
+     10305 Lee                                                                  
+Wanda                                                                           
+                                                                                
+        20 Thanksgiving Party                                 26-NOV-20         
+
+  EVENT_ID EVENT_NAME                                         EVENT_DAT         
+---------- -------------------------------------------------- ---------         
+   CUST_ID CUST_LNAME                                                           
+---------- --------------------------------------------------                   
+CUST_FNAME                                                                      
+------------------------------                                                  
+     10307 Davis                                                                
+Mike                                                                            
+                                                                                
+        18 Christmas Party                                    25-DEC-20         
+     10311 Johns                                                                
+Terry                                                                           
+                                                                                
+
+  EVENT_ID EVENT_NAME                                         EVENT_DAT         
+---------- -------------------------------------------------- ---------         
+   CUST_ID CUST_LNAME                                                           
+---------- --------------------------------------------------                   
+CUST_FNAME                                                                      
+------------------------------                                                  
+        12 Jim's Bachelor Party                               03-FEB-20         
+     10311 Johns                                                                
+Terry                                                                           
+                                                                                
+
+8 rows selected.
+
+Query 6: Let's find out what sales were paid for with something
+other than cash, in case there is an issue with the Credit/Debit
+cards.
+
+   SALE_ID PURCHASE_METHOD                                                      
+---------- ------------------------------                                       
+       101 CreditCard                                                           
+       102 CreditCard                                                           
+       103 DebitCard                                                            
+       104 CreditCard                                                           
+       105 DebitCard                                                            
+       106 DebitCard                                                            
+       107 DebitCard                                                            
+       111 CreditCard                                                           
+       112 CreditCard                                                           
+
+9 rows selected.
+
+Query 7: I can't remember Mary Samuels' contact info! Let's look
+it up.
+
+   CUST_ID CUST_LNAME                                                           
+---------- --------------------------------------------------                   
+CUST_FNAME                     CUST_PHONE_NUM                                   
+------------------------------ ------------------------------                   
+CUST_ADDRESS                                                                    
+--------------------------------------------------                              
+CUST_EMAIL                                                                      
+--------------------------------------------------                              
+     10302 Samuels                                                              
+Mary                           555-555-1238                                     
+87 E St.                                                                        
+ms@fake.com                                                                     
+                                                                                
+
+Query 8: Now that we have her contact info, let's see what she's
+ordered from us so far.
+
+DESSERT_ID DESSERT_TYPE                                                         
+---------- ------------------------------                                       
+       105 Ice Cream                                                            
+       124 Ice Cream                                                            
+       125 Cake                                                                 
+       126 Cake                                                                 
+
